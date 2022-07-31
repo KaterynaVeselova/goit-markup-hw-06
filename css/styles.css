@@ -100,11 +100,11 @@ ul {
 .header {
 	border-bottom: 1px solid var(--border-line-color);
 
-	position: fixed;
+	/* position: fixed;
 	top: -1px;
 	width: 100%;
 	z-index: 1000;
-	background-color: #ffffff;
+	background-color: #ffffff; */
 }
 .main-nav {
 	display: flex;
@@ -821,8 +821,13 @@ footer .logo-part {
 .register-form-label:focus-within .register-form-input {
 	border-color: var(--accent-color);
 }
+.register-form-input:hover,
+.register-form-textarea:hover {
+	border-color: var(--accent-color);
+}
 
-.register-form-wrap:focus-within .register-form-svg {
+.register-form-wrap:focus-within .register-form-svg,
+.register-form-wrap:hover .register-form-svg {
 	fill: var(--accent-color);
 }
 .register-form-input.link {
@@ -879,9 +884,17 @@ footer .logo-part {
 	user-select: none;
 }
 .register-form-unchecked {
-	/* fill: #212121; */
 	pointer-events: none;
 }
+.register-form-agreement-label .register-form-unchecked {
+	fill: #212121;
+	transition: fill var(--animation);
+}
+.register-form-agreement-label:hover .register-form-unchecked,
+.register-form-checkbox:focus + .register-form-icon .register-form-unchecked {
+	fill: var(--accent-color);
+}
+
 .register-form-checked {
 	pointer-events: none;
 
