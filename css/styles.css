@@ -100,11 +100,11 @@ ul {
 .header {
 	border-bottom: 1px solid var(--border-line-color);
 
-	/* position: fixed;
+	position: fixed;
 	top: -1px;
 	width: 100%;
-	z-index: 1000;
-	background-color: #ffffff; */
+	z-index: 100;
+	background-color: #ffffff;
 }
 .main-nav {
 	display: flex;
@@ -684,7 +684,7 @@ footer .logo-part {
 	background-color: rgba(0, 0, 0, 0.2);
 	width: 100%;
 	height: 100%;
-	z-index: 10;
+	z-index: 150;
 
 	opacity: 1;
 	/* for additive technologies to read */
@@ -705,7 +705,7 @@ footer .logo-part {
 	left: 50%;
 	transform: translate(-50%, -50%) scale(1);
 
-	z-index: 20;
+	z-index: 200;
 
 	width: 530px;
 
@@ -818,14 +818,11 @@ footer .logo-part {
 	fill: var(--secondary-header-color);
 	transition: fill var(--animation);
 }
-.register-form-label:focus-within .register-form-input {
-	border-color: var(--accent-color);
-}
+.register-form-label:focus-within .register-form-input,
 .register-form-input:hover,
 .register-form-textarea:hover {
 	border-color: var(--accent-color);
 }
-
 .register-form-wrap:focus-within .register-form-svg,
 .register-form-wrap:hover .register-form-svg {
 	fill: var(--accent-color);
