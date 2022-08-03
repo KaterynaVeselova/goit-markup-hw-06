@@ -103,8 +103,15 @@ ul {
 	position: fixed;
 	top: -1px;
 	width: 100%;
+	min-height: 80px;
+
 	z-index: 100;
+
 	background-color: #ffffff;
+}
+.header.transparency {
+	background-color: rgba(255, 255, 255, 0.9);
+	backdrop-filter: blur();
 }
 .main-nav {
 	display: flex;
@@ -232,6 +239,7 @@ ul {
 		url(../images/hero/hero-bg.jpg);
 	background-repeat: no-repeat;
 	background-position: center;
+	/* padding-top: 280px; */
 }
 .hero .hero-title {
 	max-width: 695px;
@@ -655,7 +663,7 @@ footer .logo-part {
 }
 
 /* button arrow up */
-.fxd-button {
+/* .fxd-button {
 	position: absolute;
 	top: 50px;
 	left: 800px;
@@ -672,7 +680,7 @@ footer .logo-part {
 }
 .fxd-button {
 	position: fixed;
-}
+} */
 
 /* 			  */
 /*  backdrop */
@@ -710,6 +718,7 @@ footer .logo-part {
 	z-index: 200;
 
 	width: 530px;
+	/* height: 580px; */
 
 	border-radius: 4px;
 
@@ -730,7 +739,8 @@ footer .logo-part {
 
 	position: relative;
 
-	bottom: 100%;
+	/* bottom: 100%; */
+	top: 0;
 	left: 100%;
 	transform: translate(-100%, 0%);
 	cursor: pointer;
@@ -745,8 +755,13 @@ footer .logo-part {
 	border: 1px solid rgba(0, 0, 0, 0.1);
 	background-color: transparent;
 }
-.btn-close-black {
+.btn-close-modal .btn-close-black {
 	fill: #000000;
+	transition: fill var(--animation);
+}
+.btn-close-modal:hover .btn-close-black,
+.btn-close-modal:focus .btn-close-black {
+	fill: var(--accent-color);
 }
 
 /* 				*/
@@ -767,7 +782,7 @@ footer .logo-part {
 
 	font-weight: 700;
 	font-size: 20px;
-	line-height: 1.17;
+	line-height: calc(23.44 / 20);
 
 	color: var(--secondary-header-color);
 }
@@ -793,7 +808,7 @@ footer .logo-part {
 	left: 0;
 
 	font-size: 12px;
-	line-height: 1.17;
+	line-height: calc(14 / 12);
 	letter-spacing: 0.01em;
 }
 .register-form-input,
@@ -819,6 +834,9 @@ footer .logo-part {
 
 	fill: var(--secondary-header-color);
 	transition: fill var(--animation);
+}
+.register-form-agreement-label {
+	height: 24px;
 }
 .register-form-label:focus-within .register-form-input,
 .register-form-input:hover,
@@ -913,8 +931,8 @@ footer .logo-part {
 }
 
 .register-submit-btn {
-	display: inline-block;
-	/* max-width: 200px; */
+	display: block;
+	width: 200px;
 	border-radius: 4px;
 	border: 1px;
 

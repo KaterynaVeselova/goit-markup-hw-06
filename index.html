@@ -19,6 +19,19 @@
 	</head>
 
 	<body data-page>
+		<!-- <button class="fxd-button" type="button">
+			<svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+				<path
+					d="M256 0C114.6 0 0 114.6 0 256c0 141.4 114.6 256 256 256s256-114.6 256-256C512 114.6 397.4 0 256 0zM382.6 254.6c-12.5 12.5-32.75 12.5-45.25 0L288 205.3V384c0 17.69-14.33 32-32 32s-32-14.31-32-32V205.3L174.6 254.6c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25l103.1-103.1C241.3 97.4 251.1 96 256 96c4.881 0 14.65 1.391 22.65 9.398l103.1 103.1C395.1 221.9 395.1 242.1 382.6 254.6z"
+				/>
+			</svg>
+		</button> -->
+		<!-- <script>
+			const { pageHeaderHeight } = document.querySelector(".header").getBoundingClientRect();
+			document.body.style.paddingTop = `${pageHeaderHeight}px`;
+			consolelog(pageHeaderHeight);
+		</script> -->
+
 		<div class="backdrop is-hidden" data-modal>
 			<div class="modal">
 				<button class="btn-close-modal" type="button" data-modal-close>
@@ -72,7 +85,7 @@
 							<use class="register-form-checked" href="./images/icons.svg#modal-checked"></use>
 							<use class="register-form-unchecked" href="./images/icons.svg#modal-unchecked"></use>
 						</svg>
-						<span class="register-form-agreement-text">Погоджуюся з розсилкою та приймаю &nbsp</span>
+						<span class="register-form-agreement-text">Погоджуюся з розсилкою та приймаю &nbsp;</span>
 						<a class="register-form-agreement-link" href="">Умови договору</a>
 					</label>
 					<!-- </div> -->
@@ -80,7 +93,7 @@
 				</form>
 			</div>
 		</div>
-		<header class="header">
+		<header class="header" data-header>
 			<div class="container main-nav">
 				<!-- logo element, returns to the main page-->
 				<a class="logo link" href="./index.html">
@@ -596,9 +609,9 @@
 				<form class="footer-subscribe">
 					<h2 class="footer-subscribe-header">Підпишіться на розсилку</h2>
 					<div class="footer-subscribe-wrap">
-						<label class="footer-subscribe-label" for="signup">
-							<input class="footer-subscribe-input" type="email" id="signup" required placeholder="E-mail" />
-						</label>
+						<!-- <label class="footer-subscribe-label" for="signup"> -->
+						<input class="footer-subscribe-input" type="email" id="signup" required placeholder="E-mail" />
+						<!-- </label> -->
 
 						<button class="footer-submit-btn" type="submit">
 							Підписатися
@@ -610,17 +623,8 @@
 				</form>
 			</div>
 		</footer>
-		<!-- <button class="fxd-button" type="button">
-			<svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-				<path
-					d="M256 0C114.6 0 0 114.6 0 256c0 141.4 114.6 256 256 256s256-114.6 256-256C512 114.6 397.4 0 256 0zM382.6 254.6c-12.5 12.5-32.75 12.5-45.25 0L288 205.3V384c0 17.69-14.33 32-32 32s-32-14.31-32-32V205.3L174.6 254.6c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25l103.1-103.1C241.3 97.4 251.1 96 256 96c4.881 0 14.65 1.391 22.65 9.398l103.1 103.1C395.1 221.9 395.1 242.1 382.6 254.6z"
-				/>
-			</svg>
-		</button> -->
-		<script>
-			const { pageHeaderHeight } = document.querySelector(".header").getBoundingClientRect();
-			document.body.style.paddingTop = `${pageHeaderHeight}px`;
-		</script>
+
 		<script src="./js/modal.js"></script>
+		<script src="./js/header-fixed.js"></script>
 	</body>
 </html>
